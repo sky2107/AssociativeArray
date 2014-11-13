@@ -1,4 +1,4 @@
-package com.nsa.associativearray.implementation;
+package com.nsa.associativearray;
 
 /**
  * Implementation of a dictionary. It maps Strings to Strings.

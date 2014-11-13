@@ -22,7 +22,7 @@ public class DictionaryTest {
 	}
 
 	/**
-	 * Test method for {@link com.nsa.associativearray.implementation.Dictionary#keys()}.
+	 * Test method for {@link com.nsa.associativearray.Dictionary#keys()}.
 	 */
 	@Test
 	public void testKeys() {
@@ -30,7 +30,7 @@ public class DictionaryTest {
 	}
 
 	/**
-	 * Test method for {@link com.nsa.associativearray.implementation.Dictionary#values()}.
+	 * Test method for {@link com.nsa.associativearray.Dictionary#values()}.
 	 */
 	@Test
 	public void testValues() {

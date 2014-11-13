@@ -1,4 +1,4 @@
-package com.nsa.associativearray.implementation;
+package com.nsa.associativearray;
 
 /**
  * Implementation of a string associative array using a bin tree structure. The

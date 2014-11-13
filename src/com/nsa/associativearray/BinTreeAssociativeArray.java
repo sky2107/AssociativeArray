@@ -1,4 +1,4 @@
-package com.nsa.associativearray.implementation;
+package com.nsa.associativearray;
 
 import java.util.AbstractMap.SimpleEntry;
 import java.util.function.BiConsumer;
