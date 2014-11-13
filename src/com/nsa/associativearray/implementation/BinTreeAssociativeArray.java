@@ -6,27 +6,38 @@ import java.util.function.BiFunction;
 
 import com.nsa.associativearray.interfaces.AssociativeArray;
 
-public class BinTreeAssociativeArray<T> implements AssociativeArray<T> {
+/**
+ * Implementation of the associative array using a bin tree structure.
+ * 
+ * @author Adrian Endrich, Marcel Heuser, Felix Navas
+ *
+ * @param <K>
+ *            the datatype for our key
+ * @param <V>
+ *            the datatype for our value
+ */
+public class BinTreeAssociativeArray<K, V> implements AssociativeArray<K, V> {
 
 	@Override
 	public void clear() {
 		// TODO Auto-generated method stub
+
 	}
 
 	@Override
-	public boolean containsValue(T value) {
+	public boolean containsValue(V value) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean containsKey(String key) {
+	public boolean containsKey(K key) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public T get(String key) {
+	public V get(K key) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -38,19 +49,19 @@ public class BinTreeAssociativeArray<T> implements AssociativeArray<T> {
 	}
 
 	@Override
-	public void put(SimpleEntry<String, T> pair) {
+	public void put(SimpleEntry<K, V> pair) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
-	public void putAll(SimpleEntry<String, T>... pairs) {
+	public void putAll(SimpleEntry<K, V>... pairs) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
-	public T remove(String key) {
+	public V remove(K key) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -62,29 +73,27 @@ public class BinTreeAssociativeArray<T> implements AssociativeArray<T> {
 	}
 
 	@Override
-	public void update(String key, T newValue) {
+	public void update(K key, V newValue) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
-	public void forEach(BiConsumer<String, T> biConsumer) {
+	public void forEach(BiConsumer<K, V> biConsumer) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
-	public void extractAll(AssociativeArray<T> destination) {
+	public void extractAll(AssociativeArray<K, V> destination) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
-	public AssociativeArray<T> map(BiFunction<String, T, AssociativeArray<T>> biFunction) {
+	public AssociativeArray<K, V> map(BiFunction<K, V, SimpleEntry<K, V>> biFunction) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-
 
 }

@@ -10,9 +10,15 @@ import java.util.function.BiFunction;
  * 
  * @author Adrian Endrich, Marcel Heuser, Felix Navas
  *
- * @param <T> the datatype for our value
+ * @param <K>
+ *            the datatype for our key
+ * @param <V>
+ *            the datatype for our value
+ * 
+ *            TODO:K should be non numeric... AssociativeArray<K extends ???,V>
+ *            maybe ?
  */
-public interface AssociativeArray<T> {
+public interface AssociativeArray<K,V> {
 
 	/**
 	 * clears the associative array.
@@ -26,7 +32,7 @@ public interface AssociativeArray<T> {
 	 *            value to check
 	 * @return true if the value is in the array
 	 */
-	public boolean containsValue(T value);
+	public boolean containsValue(V value);
 
 	/**
 	 * checks if the given key is in this associative array.
@@ -35,7 +41,7 @@ public interface AssociativeArray<T> {
 	 *            key to check
 	 * @return true if the key is in the array
 	 */
-	public boolean containsKey(String key);
+	public boolean containsKey(K key);
 
 	/**
 	 * returns the value at a given key.
@@ -44,7 +50,7 @@ public interface AssociativeArray<T> {
 	 *            the key
 	 * @return the value
 	 */
-	public T get(String key);
+	public V get(K key);
 
 	/**
 	 * checks if this associative array is empty.
@@ -59,7 +65,7 @@ public interface AssociativeArray<T> {
 	 * @param pair
 	 *            the pair to put in
 	 */
-	public void put(SimpleEntry<String, T> pair);
+	public void put(SimpleEntry<K, V> pair);
 
 	/**
 	 * puts all a key-value-pair objects into the associative array.
@@ -67,7 +73,7 @@ public interface AssociativeArray<T> {
 	 * @param pairs
 	 *            the pairs to put in
 	 */
-	public void putAll(SimpleEntry<String, T>... pairs);
+	public void putAll(SimpleEntry<K, V>... pairs);
 
 	/**
 	 * removes a certain key-value-pair from the array and returns it.
@@ -76,7 +82,7 @@ public interface AssociativeArray<T> {
 	 *            the key
 	 * @return the removed pair's value
 	 */
-	public T remove(String key);
+	public V remove(K key);
 
 	/**
 	 * returns the size of the associative array (0 meaning empty).
@@ -93,7 +99,7 @@ public interface AssociativeArray<T> {
 	 * @param newValue
 	 *            the new value
 	 */
-	public void update(String key, T newValue);
+	public void update(K key, V newValue);
 
 	/**
 	 * runs a given biConsumer on every pair in this array.
@@ -101,7 +107,7 @@ public interface AssociativeArray<T> {
 	 * @param biConsumer
 	 *            the biConsumer
 	 */
-	public void forEach(BiConsumer<String, T> biConsumer);
+	public void forEach(BiConsumer<K, V> biConsumer);
 
 	/**
 	 * copies all pairs into another associative array.
@@ -109,7 +115,7 @@ public interface AssociativeArray<T> {
 	 * @param destination
 	 *            the other array
 	 */
-	public void extractAll(AssociativeArray<T> destination);
+	public void extractAll(AssociativeArray<K,V> destination);
 
 	/**
 	 * executes the given bifunction on every pair in this associative array and
@@ -120,6 +126,6 @@ public interface AssociativeArray<T> {
 	 *            the bifunction for mapping
 	 * @return the new associative array
 	 */
-	public AssociativeArray<T> map(BiFunction<String, T, AssociativeArray<T>> biFunction);
+	public AssociativeArray<K,V> map(BiFunction<K, V, SimpleEntry<K, V>> biFunction);
 
 }
