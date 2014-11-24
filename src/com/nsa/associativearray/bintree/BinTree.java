@@ -1,10 +1,19 @@
 package com.nsa.associativearray.bintree;
 
-//TODO: JAVADOC
+/*
+ * class for binary tree with generic types KEY and VALUE
+ * 
+ * Fehlt da nicht der Konstruktor oder reicht der Default Konstruktor
+ */
+
 public class BinTree<K, V> {
 
 	private Node<K, V> root;
 	private int size = 0;
+	
+	/*
+	 *  Searchmode to find the exact KEY via HASH method
+	 */
 
 	public Node<K, V> findNode(K key) {
 
@@ -25,6 +34,10 @@ public class BinTree<K, V> {
 
 		return currentNode;
 	}
+	
+	/*
+	 * adding a new NODE to the binary tree
+	 */
 
 	public void addNode(K key, V value) {
 
@@ -74,6 +87,10 @@ public class BinTree<K, V> {
 		}
 	}
 
+	/*
+	 * Getter 
+	 */
+	
 	public Node<K, V> getRoot() {
 		return root;
 	}
@@ -82,14 +99,24 @@ public class BinTree<K, V> {
 		return size;
 	}
 	
+	/*
+	 * to clear the binary tree
+	 */
+	
 	public void clear(){
 		this.root = null;
 		this.size = 0;
 	}
 	
+	/*
+	 * check if the binary tree is EMPTY
+	 */
+	
 	public boolean isEmpty(){
 		return size==0;
 	}
+	
+	//Method are here not necessary or??
 
 	// public void inOrderTraverse(Node<K,V> currentNode) {
 	// if (currentNode != null) {
