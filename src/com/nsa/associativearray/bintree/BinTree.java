@@ -11,9 +11,27 @@ public class BinTree<K, V> {
 	private Node<K, V> root;
 	private int size = 0;
 	
+	//NUR ERSTMAL TESTEN
+	
+	/**
+	 * @param root
+	 * @param size
+	 */
+	public BinTree(Node<K,V> root, int size) {
+		this.root = root;
+		this.size = size;
+	}
+	
 	/*
 	 *  Searchmode to find the exact KEY via HASH method
 	 */
+	
+	
+
+	
+	public BinTree(Node leer, Integer erstellen) {
+		// TODO Auto-generated constructor stub
+	}
 
 	public Node<K, V> findNode(K key) {
 
@@ -35,6 +53,8 @@ public class BinTree<K, V> {
 		return currentNode;
 	}
 	
+
+
 	/*
 	 * adding a new NODE to the binary tree
 	 */

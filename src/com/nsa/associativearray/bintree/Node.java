@@ -1,5 +1,11 @@
 package com.nsa.associativearray.bintree;
 
+/*
+ * Node Class
+ */
+
+//Wieso können wir keine Vererbung benutzen mit dem tree oder
+//emuteration via TREENODE zb Adrian
 
 public class Node<K, V> {
 
@@ -7,11 +13,29 @@ public class Node<K, V> {
 	private V value;
 	private Node<K, V> left;
 	private Node<K, V> right;
+	
+	/*
+	 * constructor
+	 */
+	
+	//Frage left und right node muss doch null gesetz werden 
+	//besserer style oder
+	
+	//CHANGED PUBLIC!!!!!
+	
+	//Default constructor just in case
+	public Node  (){
+		
+	}
 
-	Node(K key, V value) {
+	public Node(K key, V value) {
 		this.key = key;
 		this.value = value;
 	}
+	
+	/*
+	 * Getter and Setter easy
+	 */
 
 	public K getKey() {
 		return key;
