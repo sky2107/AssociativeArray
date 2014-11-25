@@ -33,6 +33,10 @@ public class BinTree<K, V> {
 		// TODO Auto-generated constructor stub
 	}
 
+	public BinTree() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Node<K, V> findNode(K key) {
 
 		Node<K, V> currentNode = root;
